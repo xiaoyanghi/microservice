@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="xiao.yang.microservice.mapper.DeptMapper">
+
+	<select id="getDeptById" resultType="xiao.yang.microservice.bean.Dept" >
+		select * from depts where id=#{id};
+	</select>
+	<select id="getAllDept" resultType="xiao.yang.microservice.bean.Dept">
+		select * from depts;
+	</select>
+
+	<insert id="addDept" useGeneratedKeys="true" keyProperty="id" >
+		INSERT INTO depts(name,source) VALUES(#{name},DATABASE());
+	</insert>
+
+</mapper>
+ 
+
