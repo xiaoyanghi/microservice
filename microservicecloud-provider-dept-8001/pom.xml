@@ -29,8 +29,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-
-
+		<!-- 将微服务provider侧注册进eureka -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-eureka</artifactId>
+		</dependency>
 
 		<!--数据库连接-->
 
@@ -41,7 +44,10 @@
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-			<scope>runtime</scope>
+
+			<scope>provided</scope>
+			<!--<scope> runtime </scope> -->
+			<!--runtime 配置文件读不到 -->
 		</dependency>
 		<!--引入druid-->
 
