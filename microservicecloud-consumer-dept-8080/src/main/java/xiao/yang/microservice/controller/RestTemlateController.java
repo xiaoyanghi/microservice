@@ -15,7 +15,7 @@ public class RestTemlateController {
 
    private RestTemplate restTemplate=new RestTemplate();
 
-@RequestMapping("/consumer/get/{id}")
+    @RequestMapping("/consumer/get/{id}")
    public Dept getDeptById(@PathVariable("id") String id){
        Dept dept = restTemplate.getForObject("http://localhost:8001/get/"+id, Dept.class);
        return dept;
