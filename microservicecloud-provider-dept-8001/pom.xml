@@ -55,15 +55,17 @@
 
 		<!--数据库连接-->
 
+
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-jdbc</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>mysql</groupId>
 			<artifactId>mysql-connector-java</artifactId>
-
-			<scope>provided</scope>
+			<scope>runtime</scope>
 			<!--<scope> runtime </scope> -->
 			<!--runtime 配置文件读不到 -->
 		</dependency>

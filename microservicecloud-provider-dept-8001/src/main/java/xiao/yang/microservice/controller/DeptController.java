@@ -2,6 +2,9 @@ package xiao.yang.microservice.controller;
 
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Isolation;
+import org.springframework.transaction.annotation.Propagation;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -38,9 +41,11 @@ public class DeptController {
         return depts;
     }
 
+
     @RequestMapping("/add")
-    public int add(Dept dept){
+    public int addxx(Dept dept){
         int i = deptService.addDept(dept);
+
         return i;
     }
 }
